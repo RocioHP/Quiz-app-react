@@ -8,7 +8,7 @@ const MainMenu = () => {
 
   return (
         <div className='container'>
-        <button className='border-2 border-indigo-500 p-2 text-center rounded-full bg-indigo-100 m-10' onClick={() => {setGameState("quiz")}} >Start Quiz</button>
+        <button className='border-2 border-blue-700 p-2 text-center rounded-full bg-blue-200 m-10 hover:bg-blue-500' onClick={() => {setGameState("quiz")}} >Start Quiz</button>
       
     </div>
   )
