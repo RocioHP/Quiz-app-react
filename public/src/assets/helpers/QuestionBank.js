@@ -5,7 +5,7 @@ export const Questions = [
         optionB: 78,
         optionC: 4,
         optionD: 7,
-        answer: "OptionC"
+        answer: "C"
     },
     {
         promt: "Wich is a Streaming Platform",
@@ -13,7 +13,7 @@ export const Questions = [
         optionB: "Twitch",
         optionC: "Google",
         optionD: "Robinhood",
-        answer: "OptionB"
+        answer: "B"
     },
     {
         promt: "Best tech youtube channer?",
@@ -21,7 +21,7 @@ export const Questions = [
         optionB: "Dev Ed",
         optionC: "Friendship",
         optionD: "TechWithTim",
-        answer: "OptionA"
+        answer: "A"
     },
     
 ];
