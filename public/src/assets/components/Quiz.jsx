@@ -13,6 +13,8 @@ const Quiz = () => {
         <button className='button-start hover:bg-blue-600'>{Questions[currQuestion].optionC}</button>
         <button className='button-start hover:bg-blue-600'>{Questions[currQuestion].optionD}</button>
       </div>
+
+      <button className="button2">Next Question</button>
     </div>
   )
 }

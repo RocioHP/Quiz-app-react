@@ -6,7 +6,7 @@
     .container {
         margin: 100px auto;
         width: 300px;
-        height: 300px;
+        height: 400px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -18,15 +18,19 @@
 
 
     .button-start {
-        padding: 2px;
+        padding: 4px;
         text-align: center;
         border-radius: 100%;
-        margin: 10px;
+        margin: 8px;
         background-color: rgb(168, 198, 245);
         width: 100px;        
     }
     
-   
+    .button2 {
+        padding: 8px;
+        margin: 5px;
+        
+    }
 }
 
 
