@@ -4,19 +4,27 @@ import { QuizContext } from '../helpers/Contexts.jsx';
 import { Questions } from "../helpers/QuestionBank.js";
 
 const Quiz = () => {
-  const { score, setScore } = useContext(QuizContext);
+  const { score, setScore, setGameState } = useContext(QuizContext);
  
 
   const [currQuestion, setCurrQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
 
   const nextQuestion = () => {
-    if (Questions[currQuestion].answer == optionChosen) {
+    if (Questions[currQuestion].answer === optionChosen) {
       setScore( score + 1 )
     };
-    alert(score);
+    
     setCurrQuestion(currQuestion + 1);
   };
+
+  const finishQuiz = () => {
+    if (Questions[currQuestion].answer === optionChosen) {
+      setScore( score + 1 ) 
+    }
+    setGameState("endScreen")
+  };
+
 
   return (
     <div className='container'>
@@ -27,8 +35,12 @@ const Quiz = () => {
         <button onCLick={() => setOptionChosen("C")} className='button-start hover:bg-blue-600'>{Questions[currQuestion].optionC}</button>
         <button onCLick={() => setOptionChosen("D")} className='button-start hover:bg-blue-600'>{Questions[currQuestion].optionD}</button>
       </div>
- 
-      <button onClick={nextQuestion} className="button2">Next Question</button>
+      
+      {currQuestion == Questions.length -1 ? (
+        <button  onClick={ finishQuiz } className="button2">Finish Quiz</button>
+      ) : (<button onClick={nextQuestion} className="button2">Next Question</button>)
+      }
+      
     </div>
   )
 }
